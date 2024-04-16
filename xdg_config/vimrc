@@ -1,8 +1,8 @@
 syntax on
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set ai
 set relativenumber
 set hlsearch
 set ruler
+set ai
+set tabstop=2
+set shiftwidth=2
+set expandtab
