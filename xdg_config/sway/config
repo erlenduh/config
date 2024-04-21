@@ -149,7 +149,7 @@ bindsym $mod+r mode "resize"
 
 # -- Status Bar
 bar {
-    position bottom
+    position top
     status_command while date +'%R  %d/%m/%Y '; do sleep 1; done
     colors {
         statusline #ffffff
@@ -158,6 +158,10 @@ bar {
     }
 }
 
-default_border pixel 3 
+input type:touchpad {
+    natural_scroll enabled
+}
+default_border pixel 2 
+smart_borders on
 
 include /etc/sway/config.d/*
