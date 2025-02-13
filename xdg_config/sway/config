@@ -149,19 +149,28 @@ bindsym $mod+r mode "resize"
 
 # -- Status Bar
 bar {
-    position top
+    position bottom
     status_command while date +'%R  %d/%m/%Y '; do sleep 1; done
     colors {
         statusline #ffffff
         background #323232
         inactive_workspace #323232 #323232 #5c5c5c
-    }
+        }
 }
 
 input type:touchpad {
     natural_scroll enabled
 }
-default_border pixel 2 
-smart_borders on
+
+input "type:keyboard" {
+    xkb_layout us,no
+    xkb_options caps:escape
+}
+
+# Border with titlebar.
+default_border normal
+
+# Don't show border when only one window is open.
+smart_borders off 
 
 include /etc/sway/config.d/*
